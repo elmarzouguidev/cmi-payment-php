@@ -41,7 +41,7 @@ class BaseCmiClient implements CmiClientInterface
     public function __construct($requireOpts = [])
     {
         if (!\is_array($requireOpts)) {
-            throw new Exception($requireOpts.' must be a array');
+            throw new Exception($requireOpts . ' must be a array');
         }
 
         // MERGE REQUIRE OPTIONS WITH DEFAULT OPTIONS
@@ -371,7 +371,7 @@ class BaseCmiClient implements CmiClientInterface
         return $this->requireOpts[$name];
     }
 
-    public function __set($name, $value)
+    public function __set($name, $value): void
     {
         $this->requireOpts[$name] = $value;
     }
