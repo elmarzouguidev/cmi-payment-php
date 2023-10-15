@@ -56,5 +56,15 @@
     },
     "scripts": {
         "test" : "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Elmarzouguidev\\CMI\\LaravelCMIServiceProvider"
+            ],
+            "aliases": {
+                "CMI": "Elmarzouguidev\\CMI\\Facades\\CMIClient"
+            }
+        }
     }
 }

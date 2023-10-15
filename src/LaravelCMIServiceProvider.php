@@ -15,7 +15,7 @@ class LaravelCMIServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind('CMI', 'Elmarzouguidev\CMI\Cart');
+        $this->app->bind('CMI', 'Elmarzouguidev\CMI\CMIClient');
 
         $config = __DIR__.'/Config/laravel-cmi.php';
         $this->mergeConfigFrom($config, 'laravel-cmi');
